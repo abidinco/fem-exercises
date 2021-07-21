@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.calc {
+    width: 400px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.screen {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    padding: 20px 5px;
+    font-size: 40px;
+    direction: rtl;
+    flex-basis: 100%;
+}
+
+.calc-button {
+    background-color: #d8d9db;
+    color: black;
+    height: 100px;
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: Arial;
+    border: 2px solid black;
+}
+
+.calc-button:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+
+.double {
+    flex-basis: 50%;
+}
+
+.triple {
+    flex-basis: 75%;
+}
+
+/*
+    Following lines changes right column buttons' colors which are ←÷-+=
+*/
+
+.calc-button:nth-child(4n),
+.calc-button:last-child {
+    background-color: #df974c;
+    color: white;
+}
+.calc-button:nth-child(4n):hover,
+.calc-button:last-child:hover {
+    background-color: #dead7a;
+}
